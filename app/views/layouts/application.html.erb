@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "my_style" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <header>
+    <div class="enc">
+      <div class="flex-container">
+
+        <h1>MusicApp</h1>
+
+        <% if logged_in? %>
+
+          <form action="<%=session_url%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+            <input class="up" type="submit" value="Log out">
+          </form>
+
+        <% else %>
+
+          <form action="<%=new_user_url%>" method="post">
+            <input type="hidden" name="_method" value="get">
+            <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+            <input class="up" type="submit" value="Sign up">
+          </form>
+
+        <% end %>
+
+        </div>
+      </div>
+
+    </header>
+
+    <br>
+    <div class="yield">
+      <div class="yield">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <%= yield :footer %>
+    <p>© MusicApp Inc. - 2018</p>
+  </footer>
+</html>

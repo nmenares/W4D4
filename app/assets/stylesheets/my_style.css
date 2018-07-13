@@ -1,0 +1,73 @@
+body {
+  background-image: url("music.jpg");
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  text-align: left;
+}
+
+input {
+  height: 20px;
+  width: 200px;
+  color: grey;
+  font-family: Verdana;
+  border-color: #C4C0D1;
+  float: right;
+}
+
+input[type=submit] {
+  border-width: thick;
+  height: 30px;
+  width: 100px;
+  color: grey;
+  font-family: Verdana;
+  float: right;
+}
+
+.up {
+  margin-left: 30px;
+}
+
+
+h1 {
+  font-family: Courier;
+  color: white;
+  font-size: 50;
+}
+
+h2, p {
+  font-size: 12;
+  font-family: Verdana;
+  color: #AFA8B6;
+}
+
+form p {
+  font-size: small;
+  color: #AFA8B6;
+  font-style: italic;
+  margin: 0;
+}
+.enc {
+  margin-left: 20px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.yield {
+  margin: 30px;
+  width: max-content;
+}
+
+label {
+  font-family: Verdana;
+  font-size: 30;
+  color: #C4C0D1;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+}
