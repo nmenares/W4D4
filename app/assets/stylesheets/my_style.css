@@ -47,7 +47,8 @@ form p {
   font-style: italic;
   margin: 0;
 }
-.enc {
+
+header {
   margin-left: 20px;
 }
 
@@ -58,6 +59,7 @@ form p {
 
 .yield {
   margin: 30px;
+  margin-left: 60px;
   width: max-content;
 }
 

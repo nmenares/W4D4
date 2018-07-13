@@ -14,9 +14,14 @@
   <label for="password">Password:</label>
   <br>
   <input id="password" type="password" name="user[password]">
+  <% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+  <% end %>
   <p>minimum 6 characteres</p>
 
   <br>
+
+
 
   <input type="submit" value="Sign up">
 </form>
